@@ -1,0 +1,24 @@
+﻿/* GradientText — adapted from ReactBits */
+.gradient-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift linear infinite;
+  display: inline;
+}
+
+.gradient-text.with-border {
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text { animation: none; background-position: 0% 50%; }
+}

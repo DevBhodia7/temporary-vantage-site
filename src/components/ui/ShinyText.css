@@ -1,0 +1,31 @@
+﻿/* ShinyText — adapted from ReactBits */
+.shiny-text {
+  background: linear-gradient(
+    120deg,
+    rgba(176, 176, 176, 0) 40%,
+    rgba(0, 212, 255, 0.9) 50%,
+    rgba(176, 176, 176, 0) 60%
+  ) var(--vantage-electric, #00D4FF);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine linear infinite;
+}
+
+.shiny-text.disabled {
+  animation: none;
+  color: rgba(176, 176, 176, 0.8);
+}
+
+@keyframes shine {
+  0% { background-position: 100%; }
+  100% { background-position: -100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shiny-text {
+    animation: none;
+    color: rgba(0, 212, 255, 0.8);
+  }
+}

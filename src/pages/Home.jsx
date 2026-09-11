@@ -1,0 +1,48 @@
+import Hero from '../components/Hero';
+import ProblemStatement from '../components/ProblemStatement';
+import MainDashboard from '../components/MainDashboard';
+import WelcomeSection from '../components/WelcomeSection';
+import QuoteSection from '../components/QuoteSection';
+import Benefits from '../components/Benefits';
+import Partnerships from '../components/Partnerships';
+import CareersPreview from '../components/CareersPreview';
+
+const Home = () => {
+    return (
+        <div className="bg-vantage-black">
+            {/* Hero — plain black screen with VANTAGE text, normal scroll */}
+            <div id="home">
+                <Hero />
+            </div>
+
+            {/* Scrollytelling — problem statement narrative */}
+            <ProblemStatement />
+
+            {/* Dashboard Stats */}
+            <MainDashboard />
+
+            {/* Welcome / CTA section */}
+            <WelcomeSection />
+
+            {/* Normal flow — quote then rest of page */}
+            <div className="relative z-20 bg-vantage-black">
+                <QuoteSection />
+            </div>
+
+            <div className="relative z-20 bg-vantage-black">
+                <Benefits />
+            </div>
+
+            <div id="partners" className="relative z-20 bg-vantage-black border-t border-white/[0.06]">
+                <Partnerships />
+            </div>
+
+            {/* Careers Preview / Hiring CTA */}
+            <div id="careers-preview" className="relative z-20 bg-vantage-black">
+                <CareersPreview />
+            </div>
+        </div>
+    );
+};
+
+export default Home;
